@@ -10,7 +10,6 @@ def transfer_owner_data(apps, schema_editor):
         owner, _ = Owner.objects.get_or_create(
             owner_name=flat.owner,
             owner_pure_phone=flat.owner_pure_phone,
-            owners_phonenumber=flat.owners_phonenumber,
         )
         owner.flats.add(flat)
 
