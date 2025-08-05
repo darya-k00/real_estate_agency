@@ -12,7 +12,7 @@ def transfer_owner_data(apps, schema_editor):
             owner_pure_phone=flat.owner_pure_phone,
             owners_phonenumber=flat.owners_phonenumber,
         )
-        owner.flats.set([flat])
+        owner.flats.add(flat)
 
 
 class Migration(migrations.Migration):
